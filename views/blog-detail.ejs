@@ -1,0 +1,46 @@
+<% var pageTitle = post.title + ' — ' + SITE.name %>
+<% var pageDesc = post.excerpt %>
+<%- include('partials/header') %>
+
+<section style="padding-top:56px;">
+  <div class="wrap blog-detail">
+    <span class="hero__eyebrow" style="color:var(--brass-deep);"><%= post.category %></span>
+    <h1><%= post.title %></h1>
+    <div class="blog-detail__meta">
+      <%= new Date(post.date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) %> · By <%= post.author %>
+    </div>
+    <% if (post.cover) { %>
+    <div class="blog-detail__cover"><img src="<%= post.cover %>" alt="<%= post.title %>"></div>
+    <% } %>
+    <div class="blog-detail__content"><%- html %></div>
+  </div>
+</section>
+
+<% if (related.length) { %>
+<section class="section--tinted">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker">Keep reading</span>
+      <h2>More from the blog</h2>
+    </div>
+    <div class="blog-grid">
+      <% related.forEach(function(b){ %>
+      <a class="blog-card" href="/blog/<%= b.slug %>">
+        <div class="blog-card__cover">
+          <% if (b.cover) { %><img src="<%= b.cover %>" alt="<%= b.title %>"><% } else { %>
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.2" opacity=".5"/><path d="M7 9h10M7 13h10M7 17h6" stroke="currentColor" stroke-width="1.2"/></svg>
+          <% } %>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__meta"><%= new Date(b.date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) %></span>
+          <h3><%= b.title %></h3>
+          <span class="blog-card__link">Read more →</span>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<%- include('partials/footer') %>

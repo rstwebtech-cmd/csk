@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — <%= SITE.name %></title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-shell">
+  <div class="login-card">
+    <h2 style="margin-bottom:4px;">Admin Login</h2>
+    <p style="margin-bottom:22px;">Corporate Seva Kendra blog dashboard</p>
+    <% if (error) { %><div class="error-msg"><%= error %></div><% } %>
+    <form method="POST" action="/admin/login">
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required autofocus>
+      </div>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn--brass btn--block">Log In</button>
+    </form>
+    <p style="margin-top:18px;"><a href="/" style="color:var(--brass-deep);font-weight:600;">← Back to website</a></p>
+  </div>
+</div>
+</body>
+</html>

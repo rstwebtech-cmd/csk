@@ -1,0 +1,59 @@
+<% var pageTitle = service.name + ' — ' + SITE.name %>
+<%- include('partials/header') %>
+
+<section class="hero" style="padding-bottom:0;">
+  <div class="wrap" style="padding: 70px 24px 60px;">
+    <span class="hero__eyebrow">Services / <%= service.name %></span>
+    <h1 style="max-width:22ch;"><%= service.tagline %></h1>
+    <p class="lead"><%= service.intro %></p>
+    <div class="hero__actions">
+      <a href="/contact" class="btn btn--brass">Get a Quote</a>
+      <a href="tel:<%= SITE.phone %>" class="btn btn--outline-light">Call <%= SITE.phoneDisplay %></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker"><%= service.name %></span>
+      <h2>What's included</h2>
+    </div>
+    <div class="subgrid">
+      <% service.items.forEach(function(item){ %>
+      <div class="subgrid__item">
+        <h4><%= item.name %></h4>
+        <p><%= item.desc %></p>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section--tinted">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker">Explore other services</span>
+      <h2>Everything we handle</h2>
+    </div>
+    <div class="ledger">
+      <% services.filter(function(s){ return s.slug !== service.slug }).forEach(function(s){ %>
+      <a class="ledger__row" href="/services/<%= s.slug %>">
+        <span class="ledger__name"><%= s.name %></span>
+        <p class="ledger__desc"><%= s.summary %></p>
+        <span class="ledger__arrow">→</span>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section--navy">
+  <div class="wrap" style="text-align:center;">
+    <h2>Ready to start with <%= service.name %>?</h2>
+    <p style="max-width:44ch;margin:0 auto 26px;">Share a few details and we'll come back with the exact documents and timeline.</p>
+    <a href="/contact" class="btn btn--brass">Get a Quote</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,34 @@
+<% var pageTitle = 'Our Services — ' + SITE.name %>
+<%- include('partials/header') %>
+
+<section class="hero" style="padding-bottom:0;">
+  <div class="wrap" style="padding: 70px 24px 60px;">
+    <span class="hero__eyebrow">Services</span>
+    <h1 style="max-width:22ch;">Seven service lines, one team that already knows your business.</h1>
+    <p class="lead">Pick a category to see the filings, registrations and consultations we handle within it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="ledger">
+      <% services.forEach(function(s){ %>
+      <a class="ledger__row" href="/services/<%= s.slug %>">
+        <span class="ledger__name"><%= s.name %></span>
+        <p class="ledger__desc"><%= s.summary %></p>
+        <span class="ledger__arrow">→</span>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section--navy">
+  <div class="wrap" style="text-align:center;">
+    <h2>Not sure which service you need?</h2>
+    <p style="max-width:44ch;margin:0 auto 26px;">Describe your situation and we'll tell you exactly what applies — free of charge.</p>
+    <a href="/contact" class="btn btn--brass">Get a Quote</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

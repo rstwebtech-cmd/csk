@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= post ? 'Edit Post' : 'New Post' %> — <%= SITE.name %></title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-shell">
+
+<div class="admin-topbar">
+  <span><strong>Corporate Seva Kendra</strong> — <%= post ? 'Edit Post' : 'New Post' %></span>
+  <a href="/admin/dashboard" style="color:var(--paper);font-size:.85rem;">← Back to dashboard</a>
+</div>
+
+<div class="admin-wrap">
+  <div class="admin-card">
+    <form method="POST" action="/admin/blog/save" enctype="multipart/form-data">
+      <% if (post) { %>
+        <input type="hidden" name="id" value="<%= post.id %>">
+        <input type="hidden" name="existingCover" value="<%= post.cover %>">
+      <% } %>
+
+      <div class="form-field">
+        <label for="title">Title *</label>
+        <input type="text" id="title" name="title" required value="<%= post ? post.title : '' %>">
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="category">Category *</label>
+          <select id="category" name="category" required>
+            <% ['Incorporation','Compliance','Trademark','GST','Income Tax','Payroll','Licenses','General'].forEach(function(c){ %>
+              <option <%= post && post.category === c ? 'selected' : '' %>><%= c %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="date">Publish Date *</label>
+          <input type="date" id="date" name="date" required value="<%= post ? post.date : new Date().toISOString().slice(0,10) %>">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" value="<%= post ? post.author : 'Admin' %>">
+      </div>
+
+      <div class="form-field">
+        <label for="excerpt">Short Excerpt (shown on listing cards) *</label>
+        <textarea id="excerpt" name="excerpt" rows="2" required><%= post ? post.excerpt : '' %></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="cover">Cover Image (jpg, png, webp — max 5MB)</label>
+        <% if (post && post.cover) { %>
+          <img class="cover-preview" style="width:140px;height:90px;margin-bottom:10px;" src="<%= post.cover %>" alt="">
+        <% } %>
+        <input type="file" id="cover" name="cover" accept="image/*">
+      </div>
+
+      <div class="form-field">
+        <label for="content">Content * (Markdown supported — use ## for headings, blank lines between paragraphs, - for bullet lists)</label>
+        <textarea id="content" name="content" rows="16" required><%= post ? post.content : '' %></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--brass">Save Post</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "incorporation",
+    "name": "Incorporation",
+    "tagline": "Start your business on the right legal footing",
+    "summary": "End-to-end company and firm registration across every structure recognised under Indian law, handled by CA/CS professionals with 10+ years of hands-on filing experience.",
+    "intro": "Choosing the right legal structure shapes your taxation, liability, fundraising and compliance for years to come. Our incorporation desk manages the entire process — name approval, drafting, digital signatures, filing and the final certificate — so you can focus on building the business, not chasing paperwork.",
+    "items": [
+      { "name": "Private Limited Company", "slug": "private-limited-company", "desc": "The most common structure for funded start-ups and growing businesses, offering limited liability and easy access to investment." },
+      { "name": "LLP Registration", "slug": "llp-registration", "desc": "A hybrid structure combining the flexibility of a partnership with the liability protection of a company — ideal for professional practices and small teams." },
+      { "name": "One Person Company", "slug": "one-person-company", "desc": "Full corporate status for a solo founder, without needing a second shareholder or director." },
+      { "name": "Public Limited Company", "slug": "public-limited-company", "desc": "Structured for businesses planning to raise capital from the public or list on a stock exchange in future." },
+      { "name": "Section 8 Company", "slug": "section-8-company", "desc": "A non-profit company structure for charitable, educational or social objectives, with tax exemptions available." },
+      { "name": "Nidhi Company", "slug": "nidhi-company", "desc": "A member-based NBFC structure for cultivating savings and lending among a closed group of members." },
+      { "name": "Sole Proprietorship Registration", "slug": "sole-proprietorship-registration", "desc": "The simplest way to formalise a small or single-owner business with minimal compliance overhead." }
+    ]
+  },
+  {
+    "slug": "compliance",
+    "name": "Compliance",
+    "tagline": "Stay audit-ready, every filing on time",
+    "summary": "Every change in your company — a new director, a shifted office, an amended charter — has to be reported to the Registrar of Companies within a fixed window. We track the deadlines so you don't have to.",
+    "intro": "Corporate compliance isn't a once-a-year event; it's triggered every time something changes inside your company. Missed filings attract penalties that compound daily. Our compliance team maintains a running calendar for every client and files the moment a change is confirmed.",
+    "items": [
+      { "name": "Add a Director", "slug": "add-a-director", "desc": "Appoint a new director and update statutory records with the Registrar of Companies." },
+      { "name": "Removal of Director", "slug": "removal-of-director", "desc": "Process resignation or removal of a director in line with the Companies Act." },
+      { "name": "Add/Remove a Partner in LLP", "slug": "add-remove-partner-llp", "desc": "Update the LLP agreement and file the corresponding change with the Registrar." },
+      { "name": "Change of Registered Office Address", "slug": "change-registered-office-address", "desc": "Shift your registered office within or across states with the correct board and shareholder approvals." },
+      { "name": "Change/Surrender of DIN", "slug": "change-surrender-din", "desc": "Update director details or surrender a Director Identification Number that is no longer in use." },
+      { "name": "Appointment of Auditors", "slug": "appointment-of-auditors", "desc": "Appoint or reappoint statutory auditors within the timelines prescribed by the Companies Act." },
+      { "name": "Company Name Change", "slug": "company-name-change", "desc": "Rebrand and legally rename your company with RoC approval and updated certificates." },
+      { "name": "MOA/AOA Amendment", "slug": "moa-aoa-amendment", "desc": "Amend your Memorandum or Articles of Association to reflect new objects, capital or internal rules." },
+      { "name": "Increase Authorised Capital", "slug": "increase-authorised-capital", "desc": "Raise your company's authorised share capital to make room for future fundraising." },
+      { "name": "LLP Name Change", "slug": "llp-name-change", "desc": "Rename a Limited Liability Partnership and update all statutory records." },
+      { "name": "Statutory Registers", "slug": "statutory-registers", "desc": "Set up and maintain the statutory registers every company is required to keep under law." }
+    ]
+  },
+  {
+    "slug": "trademark",
+    "name": "Trademark & IP",
+    "tagline": "Protect the name people know you by",
+    "summary": "From clearing a name for use to defending it against objections, our IP desk handles trademark, copyright and patent filings so your brand identity stays legally yours.",
+    "intro": "A brand is one of the few assets that grows more valuable the longer you hold it — provided it's registered before someone else claims it. We search, file and follow through on objections so your mark, logo and creative work are properly protected.",
+    "items": [
+      { "name": "Trademark Registration", "slug": "trademark-registration", "desc": "Register your brand name, logo or tagline under the Trade Marks Act, 1999." },
+      { "name": "Search for Trademark", "slug": "search-for-trademark", "desc": "Check for conflicting marks before you invest in a brand identity." },
+      { "name": "Respond to Trademark Objection", "slug": "respond-to-trademark-objection", "desc": "Draft and file a reply to an examination objection raised by the Trademark Registry." },
+      { "name": "Trademark Watch", "slug": "trademark-watch", "desc": "Ongoing monitoring for new applications that may infringe on your registered mark." },
+      { "name": "Trademark Renewal", "slug": "trademark-renewal", "desc": "Renew your registration before expiry to keep protection continuous." },
+      { "name": "Logo Design", "slug": "logo-design", "desc": "Original logo design built to be distinctive and registration-friendly." },
+      { "name": "Copyright Registration", "slug": "copyright-registration", "desc": "Register literary, artistic or software works under the Copyright Act." },
+      { "name": "Patent Search", "slug": "patent-search", "desc": "Prior-art search to assess the novelty of an invention before filing." },
+      { "name": "Provisional Patent Application", "slug": "provisional-patent-application", "desc": "Lock in a priority date early while you finalise the complete specification." },
+      { "name": "Permanent Patent", "slug": "permanent-patent", "desc": "File a complete patent application and manage it through to grant." }
+    ]
+  },
+  {
+    "slug": "gst",
+    "name": "GST",
+    "tagline": "Registration, returns and reconciliation, handled monthly",
+    "summary": "GST touches every invoice you raise. We handle registration, monthly and annual returns, e-way bills and notice replies so your input credit is never at risk.",
+    "intro": "GST compliance is unforgiving of small errors — a mismatched invoice or a missed due date can block input tax credit or trigger a notice. Our GST team reconciles your books every month, not just at filing time, so returns are accurate the first time.",
+    "items": [
+      { "name": "GST Registration", "slug": "gst-registration", "desc": "Register for GST when your turnover crosses the threshold or you need it for e-commerce, exports or voluntary compliance." },
+      { "name": "Online Legal Consultation", "slug": "online-legal-consultation", "desc": "One-on-one consultation on GST applicability, rate classification and structuring." },
+      { "name": "GSTR-9 Annual Filing", "slug": "gstr9-annual-filing", "desc": "Prepare and file the consolidated annual GST return with reconciled turnover figures." },
+      { "name": "GST E-Way Bill", "slug": "gst-e-way-bill", "desc": "Generate and manage e-way bills for the movement of goods above the prescribed value." }
+    ]
+  },
+  {
+    "slug": "income-tax",
+    "name": "Income Tax",
+    "tagline": "File on time, claim what you're owed",
+    "summary": "From salaried individuals to growing companies, we prepare and file income tax returns, respond to notices and advise on tax planning throughout the year — not just in tax season.",
+    "intro": "Your income tax return is a formal declaration of your income, deductions and tax position for the year — get it wrong and you risk a notice; get it right and you may be owed a refund. We plan ahead of the deadline so filing is accurate and stress-free.",
+    "items": [
+      { "name": "Income Tax Return Filing", "slug": "income-tax-return-filing", "desc": "Filing for individuals, professionals, firms and companies across all applicable ITR forms." },
+      { "name": "Online Tax Consultancy", "slug": "online-tax-consultancy", "desc": "Advisory on tax planning, deductions and structuring income to legally minimise your tax outgo." },
+      { "name": "Reply to Notice & Intimation", "slug": "reply-to-notice-intimation", "desc": "Drafting and filing responses to Income Tax Department notices and intimations under various sections." }
+    ]
+  },
+  {
+    "slug": "payroll",
+    "name": "Payroll",
+    "tagline": "Payroll compliance that keeps employees and inspectors happy",
+    "summary": "Professional tax, PF and ESIC touch every payslip you issue. We register, file and reconcile these on a fixed monthly cycle so your payroll team never has to worry about statutory deadlines.",
+    "intro": "Payroll compliance sits at the intersection of employee trust and statutory law — get it wrong and both suffer. We manage registrations and periodic filings for professional tax, provident fund and ESIC so your HR team can focus on people, not paperwork.",
+    "items": [
+      { "name": "Professional Tax Registration", "slug": "professional-tax-registration", "desc": "Register your establishment for professional tax in the applicable state." },
+      { "name": "PTEC & PTRC Registration", "slug": "ptec-ptrc-registration", "desc": "Obtain both employer and employee professional tax registrations where required." },
+      { "name": "PF Return Filing", "slug": "pf-return-filing", "desc": "Monthly provident fund contribution filing and reconciliation for your workforce." },
+      { "name": "ESIC Registration", "slug": "esic-registration", "desc": "Register your establishment under the Employees' State Insurance scheme." },
+      { "name": "ESIC Filing", "slug": "esic-filing", "desc": "Periodic ESIC contribution filing to keep employee health-insurance cover active." }
+    ]
+  },
+  {
+    "slug": "licenses",
+    "name": "Licenses",
+    "tagline": "The permits that let you legally operate",
+    "summary": "Food businesses, importers and exporters, and anyone signing documents digitally each need a specific license or certificate before they can legally operate. We secure and renew them all.",
+    "intro": "Operating without the right license isn't just a compliance gap — it can shut a business down overnight. We identify exactly which licenses your business needs and manage the full application, renewal and modification cycle.",
+    "items": [
+      { "name": "FSSAI Registration & License", "slug": "fssai-registration", "desc": "Food safety registration or license depending on the scale of your food business." },
+      { "name": "FSSAI Renewal", "slug": "fssai-renewal", "desc": "Renew your FSSAI license before expiry to keep operations uninterrupted." },
+      { "name": "FSSAI Modification", "slug": "fssai-modification", "desc": "Update your FSSAI license when business details, activities or premises change." },
+      { "name": "FSSAI Annual Return Filing", "slug": "fssai-annual-return-filing", "desc": "File the mandatory annual return with the food safety department." },
+      { "name": "Import Export Code (IEC)", "slug": "import-export-code", "desc": "Obtain the IEC required to import or export goods and services from India." },
+      { "name": "IEC Modification", "slug": "import-export-code-modification", "desc": "Update your Import Export Code when business or address details change." },
+      { "name": "Digital Signature Certificate", "slug": "digital-signature-certificate", "desc": "Obtain a Class 3 DSC for signing statutory filings, tenders and e-forms." }
+    ]
+  }
+]

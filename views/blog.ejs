@@ -1,0 +1,38 @@
+<% var pageTitle = 'Blog — ' + SITE.name %>
+<%- include('partials/header') %>
+
+<section class="hero" style="padding-bottom:0;">
+  <div class="wrap" style="padding: 70px 24px 60px;">
+    <span class="hero__eyebrow">Resources</span>
+    <h1 style="max-width:20ch;">Blog From Resource</h1>
+    <p class="lead">Plain-language notes on deadlines, registrations and compliance changes that affect Indian businesses.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <% if (blogs.length === 0) { %>
+      <p>No posts published yet — check back soon.</p>
+    <% } else { %>
+    <div class="blog-grid">
+      <% blogs.forEach(function(b){ %>
+      <a class="blog-card" href="/blog/<%= b.slug %>">
+        <div class="blog-card__cover">
+          <% if (b.cover) { %><img src="<%= b.cover %>" alt="<%= b.title %>"><% } else { %>
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.2" opacity=".5"/><path d="M7 9h10M7 13h10M7 17h6" stroke="currentColor" stroke-width="1.2"/></svg>
+          <% } %>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__meta"><%= new Date(b.date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) %> · <%= b.category %></span>
+          <h3><%= b.title %></h3>
+          <p><%= b.excerpt %></p>
+          <span class="blog-card__link">Read more →</span>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

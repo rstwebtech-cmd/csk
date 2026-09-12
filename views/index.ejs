@@ -1,0 +1,117 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div>
+      <span class="hero__eyebrow">Chartered Accountants · Delhi NCR</span>
+      <h1>Your compliance, filed correctly and on time — every time.</h1>
+      <p class="lead">Corporate Seva Kendra handles company incorporation, GST, income tax, trademarks, payroll and licensing for founders and businesses across India, so nothing slips past a deadline.</p>
+      <div class="hero__actions">
+        <a href="/contact" class="btn btn--brass">Get a Quote</a>
+        <a href="tel:<%= SITE.phone %>" class="btn btn--outline-light">Call <%= SITE.phoneDisplay %></a>
+      </div>
+    </div>
+
+    <div class="hero__panel">
+      <h3>This month's filing calendar</h3>
+      <p>A few deadlines businesses commonly miss</p>
+      <div class="hero__ledger-row"><span>GSTR-3B (monthly)</span><strong>20th</strong></div>
+      <div class="hero__ledger-row"><span>TDS Payment</span><strong>7th</strong></div>
+      <div class="hero__ledger-row"><span>PF / ESIC Contribution</span><strong>15th</strong></div>
+      <div class="hero__ledger-row"><span>ITR (non-audit cases)</span><strong>31 Jul</strong></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker">What we do</span>
+      <h2>Best Corporate Services</h2>
+    </div>
+    <div class="ledger">
+      <% services.forEach(function(s){ %>
+      <a class="ledger__row" href="/services/<%= s.slug %>">
+        <span class="ledger__name"><%= s.name %></span>
+        <p class="ledger__desc"><%= s.summary %></p>
+        <span class="ledger__arrow">→</span>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section--tinted">
+  <div class="wrap about-strip">
+    <div>
+      <span class="section__kicker">Who we are</span>
+      <h2>Chartered Accountants your business can build a long-term relationship with</h2>
+      <p>We work with founders, small businesses and growing companies across New Delhi and other major Indian cities — handling accounts outsourcing, auditing, company formation, business taxation, corporate compliance and cross-border registration.</p>
+      <p>No two clients run the same business, so our approach is customised to your structure, industry and growth stage rather than a one-size-fits-all checklist.</p>
+      <a href="/about" class="btn btn--outline">More about us</a>
+    </div>
+    <div class="about-strip__figure">
+      <h3 style="color:var(--paper)">Why businesses choose us</h3>
+      <p style="color:rgba(242,239,229,.7)">A modern, result-oriented approach backed by CAs and CS professionals with over a decade of filing experience.</p>
+      <div class="stat-row">
+        <div class="stat"><b>1200+</b><span>Filings completed</span></div>
+        <div class="stat"><b>10+ yrs</b><span>Team experience</span></div>
+        <div class="stat"><b>7</b><span>Service categories</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker">How it works</span>
+      <h2>From first call to certificate, in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step__num">01</span><h4>Free consultation</h4><p>Tell us what you need — we identify the right service and documents in one call.</p></div>
+      <div class="step"><span class="step__num">02</span><h4>Documentation</h4><p>We draft and collect the paperwork, keeping the back-and-forth to a minimum.</p></div>
+      <div class="step"><span class="step__num">03</span><h4>Filing</h4><p>Your application is filed with the relevant department and tracked until approval.</p></div>
+      <div class="step"><span class="step__num">04</span><h4>Delivery</h4><p>You receive your certificate or filing acknowledgment, plus a compliance calendar going forward.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tinted">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__kicker">Resources</span>
+      <h2>Blog From Resource</h2>
+    </div>
+    <div class="blog-grid">
+      <% blogs.forEach(function(b){ %>
+      <a class="blog-card" href="/blog/<%= b.slug %>">
+        <div class="blog-card__cover">
+          <% if (b.cover) { %><img src="<%= b.cover %>" alt="<%= b.title %>"><% } else { %>
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.2" opacity=".5"/><path d="M7 9h10M7 13h10M7 17h6" stroke="currentColor" stroke-width="1.2"/></svg>
+          <% } %>
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__meta"><%= new Date(b.date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) %> · <%= b.category %></span>
+          <h3><%= b.title %></h3>
+          <p><%= b.excerpt %></p>
+          <span class="blog-card__link">Read more →</span>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section--navy">
+  <div class="wrap" style="text-align:center;">
+    <h2>Ready to get your filing off your plate?</h2>
+    <p style="max-width:44ch;margin:0 auto 26px;">Speak with a CA today — most queries are answered on the first call.</p>
+    <div class="hero__actions" style="justify-content:center;">
+      <a href="/contact" class="btn btn--brass">Get a Quote</a>
+      <a href="<%= SITE.whatsapp %>" class="btn btn--outline-light" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
